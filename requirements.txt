@@ -1,0 +1,6 @@
+transformers
+accelerate
+tiktoken
+einops
+transformers_stream_generator
+scipy
