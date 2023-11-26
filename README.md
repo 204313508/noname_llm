@@ -24,12 +24,12 @@
 
    模型下载地址:
    - [huggingface地址](https://huggingface.co/Qwen/Qwen-7B-Chat)
-   - [百度网盘地址](链接：https://pan.baidu.com/s/1OrB_dEACkyhp-iOkP2RkJg?pwd=6666) 百度网盘提取码：6666
+   - [百度网盘地址](https://pan.baidu.com/s/1OrB_dEACkyhp-iOkP2RkJg?pwd=6666) 百度网盘提取码：6666
 
 4. 下载权重文件并放入 `checkpoint` 文件夹中，最终目录应为 `xx/model/checkpoint-xx`
 
    测试版仅开放了0.4k的 checkpoint 下载地址:
-   - [百度网盘地址](链接：https://pan.baidu.com/s/1nugDoRroD2I0dX3fcP9umA?pwd=6666) 百度网盘提取码：6666
+   - [百度网盘地址](https://pan.baidu.com/s/1nugDoRroD2I0dX3fcP9umA?pwd=6666) 百度网盘提取码：6666
 
 5. 运行 Python 脚本:
 
