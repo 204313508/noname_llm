@@ -26,9 +26,9 @@
    - [huggingface地址](https://huggingface.co/Qwen/Qwen-7B-Chat)
    - [百度网盘地址](https://pan.baidu.com/s/1OrB_dEACkyhp-iOkP2RkJg?pwd=6666) 百度网盘提取码：6666
 
-4. 下载权重文件并放入 `checkpoint` 文件夹中，最终目录应为 `xx/model/checkpoint-xx`
+4. 下载权重文件并放入 `checkpoint` 文件夹中，最终目录应为 `xx/model/版本`
 
-   测试版仅开放了0.4k的 checkpoint 下载地址:
+   checkpoint 下载地址，请选择合适的版本进行下载:
    - [百度网盘地址](https://pan.baidu.com/s/1nugDoRroD2I0dX3fcP9umA?pwd=6666) 百度网盘提取码：6666
 
 5. 运行 Python 脚本:
@@ -49,4 +49,10 @@
 
 ## 演示图片
 
-![demo](./demo.png)
+![demo1](./demo1.jpg)
+![demo2](./demo2.jpg)
+![demo3](./demo3.jpg)
+
+## 赞助
+- 厚颜无耻的求一个赞助
+![sponsor](./sponsor.jpg)
