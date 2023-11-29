@@ -8,7 +8,7 @@ def loadmodel(modelpath):
     tokenizer = AutoTokenizer.from_pretrained(modelpath, trust_remote_code=True)
     # model = AutoModelForCausalLM.from_pretrained(modelpath, device_map="auto", trust_remote_code=True,use_flash_attn=False).eval()
     model = AutoPeftModelForCausalLM.from_pretrained(
-        "./checkpoint/checkpoint_0.4k", # path to the output directory
+        "./checkpoint/正式版v1.0", # path to the output directory
         device_map="auto",
         bf16=True,
         trust_remote_code=True,
