@@ -20,7 +20,7 @@
    pip install -r requirements.txt
    ```
 
-3. 下载模型文件并放入 `model` 文件夹中，最终目录应为 `xx/model/QWen-7B-Chat`
+3. 下载模型文件并放入 `models` 文件夹中，最终目录应为 `xx/models/QWen-7B-Chat`
 
    模型下载地址:
    - [huggingface地址](https://huggingface.co/Qwen/Qwen-7B-Chat)
