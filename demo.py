@@ -21,7 +21,7 @@ def llmchat(tokenizer,model,query,historys):
     response, history = model.chat(tokenizer, query, history = historys)
     return response,history
 
-tokenizer,model = loadmodel("./model/QWen-7B-Chat")
+tokenizer,model = loadmodel("./models/QWen-7B-Chat")
 while True:
     print("请输入技能效果：")
     prompt = input()
