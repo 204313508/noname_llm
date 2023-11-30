@@ -46,8 +46,8 @@
    streamlit run webdemo.py
    ```
 ## 网页版/服务器示例
-![webdemo1](./webdemo1.jpg)
-![webdemo2](./webdemo2.jpg)
+![webdemo1](./webdemo1.png)
+![webdemo2](./webdemo2.png)
 ## 注意事项
 
 - AI生成受不可控因素影响，生成的代码不保证100%有效，仍可能出现bug、冗余代码或额外特殊符号等，需要人工修改。
