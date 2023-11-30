@@ -37,14 +37,21 @@
    python demo.py
    ```
 ## 网页版/服务器部署
+   - 安装 Python 
+   - 安装依赖环境
+   ```bash
+   pip install -r requirements.txt
+   ```
   - 安装streamlit
    ```bash
    pip install streamlit
    ```
+   - 服务器放行8501端口（也可自行改成其他，需要和webdemo.py文件中对应）
    - 运行webdemo
    ```bash
    streamlit run webdemo.py
    ```
+   
 ## 网页版/服务器示例
 ![webdemo1](./webdemo1.png)
 ![webdemo2](./webdemo2.png)
