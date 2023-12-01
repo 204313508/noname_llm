@@ -36,6 +36,9 @@
    ```bash
    python demo.py
    ```
+## 懒人一键包
+- 一键安装，无需烦恼（缺点：大）
+- [百度网盘地址](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
 ## 网页版/服务器部署
    - 安装 Python 
    - 安装依赖环境
