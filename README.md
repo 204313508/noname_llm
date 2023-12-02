@@ -8,30 +8,31 @@
 
 - 电脑（必须）
 - 硬盘存储空间20G以上（必须）
-- 对于具有 NVIDIA 显卡的电脑，要求显存 + 电脑内存的一半 >= 16G
-- 对于无显卡的电脑，要求内存尽可能满足 >= 32G
+- 若使用完整非量化版本，对于具有 NVIDIA 显卡的电脑，采用gpu推理，要求显存 + 电脑物理内存（物理内存不包含虚拟内存）的一半 >= 16G
+- 若使用完整非量化版本，采用cpu方式推理，对于无显卡的电脑，要求内存（可包含虚拟内存）尽可能满足 >= 32G
 
 ## 使用方法
 
 1. 安装 Python 以及相应的 Python 编译器
-2. 在终端（命令行）中输入以下命令安装依赖环境:
+  - 注意：python适配版本为3.8，3.9,3.10,3.11，请勿安装过高或过低版本
+3. 在终端（命令行）中输入以下命令安装依赖环境:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. 下载模型文件并放入 `models` 文件夹中，最终目录应为 `xx/models/QWen-7B-Chat`
+4. 下载模型文件并放入 `models` 文件夹中，最终目录应为 `xx/models/QWen-7B-Chat`
 
    模型下载地址:
    - [huggingface地址](https://huggingface.co/Qwen/Qwen-7B-Chat)
    - [百度网盘地址](https://pan.baidu.com/s/1OrB_dEACkyhp-iOkP2RkJg?pwd=6666) 百度网盘提取码：6666
 
-4. 下载权重文件并放入 `checkpoint` 文件夹中，最终目录应为 `xx/model/版本`
+5. 下载权重文件并放入 `checkpoint` 文件夹中，最终目录应为 `xx/model/版本`
 
    checkpoint 下载地址，请选择合适的版本进行下载:
    - [百度网盘地址](https://pan.baidu.com/s/1nugDoRroD2I0dX3fcP9umA?pwd=6666) 百度网盘提取码：6666
 
-5. 运行 Python 脚本:
+6. 运行 Python 脚本:
 
    ```bash
    python demo.py
