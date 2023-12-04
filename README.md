@@ -15,12 +15,12 @@
 ### 完整模型法
 1. 安装 Python 以及相应的 Python 编译器
   - 注意：python适配版本为3.8,3.9,3.10,3.11，请勿安装过高或过低版本
-3. 在终端（命令行）中输入以下命令安装依赖环境:
+2. 在终端（命令行）中输入以下命令安装依赖环境:
 
    ```bash
    pip install -r requirements.txt
    ```
-4. 采用以下python代码运行程序，模型将会自动下载
+3. 采用以下python代码运行程序，模型将会自动下载
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
@@ -46,24 +46,24 @@ while True:
 ### delta checkpoint法
 1. 安装 Python 以及相应的 Python 编译器
   - 注意：python适配版本为3.8,3.9,3.10,3.11，请勿安装过高或过低版本
-3. 在终端（命令行）中输入以下命令安装依赖环境:
+2. 在终端（命令行）中输入以下命令安装依赖环境:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. 下载模型文件并放入 `models` 文件夹中，最终目录应为 `xx/models/QWen-7B-Chat`
+3. 下载模型文件并放入 `models` 文件夹中，最终目录应为 `xx/models/QWen-7B-Chat`
 
    模型下载地址:
    - [huggingface地址](https://huggingface.co/Qwen/Qwen-7B-Chat)
    - [百度网盘地址](https://pan.baidu.com/s/1OrB_dEACkyhp-iOkP2RkJg?pwd=6666) 百度网盘提取码：6666
 
-5. 下载权重文件并放入 `checkpoint` 文件夹中，最终目录应为 `xx/model/版本`
+4. 下载权重文件并放入 `checkpoint` 文件夹中，最终目录应为 `xx/model/版本`
 
    checkpoint 下载地址，请选择合适的版本进行下载:
    - [百度网盘地址](https://pan.baidu.com/s/1nugDoRroD2I0dX3fcP9umA?pwd=6666) 百度网盘提取码：6666
 
-6. 运行 Python 脚本:
+5. 运行 Python 脚本:
 
    ```bash
    python demo.py
