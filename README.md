@@ -35,6 +35,23 @@ while True:
     response, history = model.chat(tokenizer, prompt, history = [])
     print(response)
 ```
+也可以采用huggingface的pipeline进行推理
+```python
+from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, GenerationConfig
+generator = pipeline(
+    "text-generation",
+    model="huskyhong/noname-ai-v1",
+    tokenizer="huskyhong/noname-ai-v1",
+    device=0,  # 选择GPU设备，如果要使用CPU，可以设置device=-1
+    trust_remote_code=True
+)
+
+while True:
+    print("请输入技能效果：")
+    prompt = "请帮我编写一个技能，技能效果如下：" + input()
+    response = generator(prompt, max_length=50, top_p=0.95)  # 可根据需要调整生成长度、top_p等超参数
+    print(response[0]['generated_text'])
+```
 4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v1"为相应位置
       模型下载地址:
    - [huggingface地址](https://huggingface.co/huskyhong/noname-ai-v1)
