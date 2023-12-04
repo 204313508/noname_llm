@@ -12,7 +12,46 @@
 - 若使用完整非量化版本/cpu版懒人一键包，采用cpu方式推理，对于无显卡的电脑，要求内存（可包含虚拟内存）尽可能满足 >= 32G
 
 ## 使用方法
+### 完整模型法
+1. 安装 Python 以及相应的 Python 编译器
+  - 注意：python适配版本为3.8,3.9,3.10,3.11，请勿安装过高或过低版本
+3. 在终端（命令行）中输入以下命令安装依赖环境:
 
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. 下载模型文件并放入 `models` 文件夹中
+      模型下载地址:
+   - [huggingface地址](https://huggingface.co/huskyhong/noname-ai-v1.0)
+6. 采用以下python代码运行程序
+```python
+def loadmodel(modelpath):
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers.generation import GenerationConfig
+    tokenizer = AutoTokenizer.from_pretrained(modelpath, trust_remote_code=True)
+    # model = AutoModelForCausalLM.from_pretrained(modelpath, device_map="auto", trust_remote_code=True).eval() # 采用gpu加载模型
+    model = AutoModelForCausalLM.from_pretrained(modelpath, device_map="cpu", trust_remote_code=True).eval() # 采用cpu加载模型
+    model.generation_config = GenerationConfig.from_pretrained(modelpath, trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
+    return tokenizer, model
+
+def llmchat(tokenizer, model, query, historys):
+    response, history = model.chat(tokenizer, query, history=historys)
+    return response, history
+
+tokenizer, model = loadmodel("./models/your_model_name")  # 在这里将你的路径修改为模型路径
+while True:
+    print("请输入技能效果：")
+    prompt = input()
+    prompt = "请帮我编写一个技能，技能效果如下：" + prompt
+    history = []
+    llmanswer, history = llmchat(tokenizer, model, prompt, history)
+    print(llmanswer)
+```
+
+记得选择采用gpu加载模型还是cpu加载模型，然后把 `your_model_name` 替换为你实际的模型路径。
+
+### delta checkpoint法
 1. 安装 Python 以及相应的 Python 编译器
   - 注意：python适配版本为3.8,3.9,3.10,3.11，请勿安装过高或过低版本
 3. 在终端（命令行）中输入以下命令安装依赖环境:
