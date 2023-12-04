@@ -20,34 +20,26 @@
    ```bash
    pip install -r requirements.txt
    ```
-
-4. 下载模型文件并放入 `models` 文件夹中
-      模型下载地址:
-   - [huggingface地址](https://huggingface.co/huskyhong/noname-ai-v1.0)
-6. 采用以下python代码运行程序
+4. 采用以下python代码运行程序，模型将会自动下载
 ```python
-def loadmodel(modelpath):
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-    from transformers.generation import GenerationConfig
-    tokenizer = AutoTokenizer.from_pretrained(modelpath, trust_remote_code=True)
-    # model = AutoModelForCausalLM.from_pretrained(modelpath, device_map="auto", trust_remote_code=True).eval() # 采用gpu加载模型
-    model = AutoModelForCausalLM.from_pretrained(modelpath, device_map="cpu", trust_remote_code=True).eval() # 采用cpu加载模型
-    model.generation_config = GenerationConfig.from_pretrained(modelpath, trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
-    return tokenizer, model
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers.generation import GenerationConfig
+tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v1", trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v1", device_map="auto", trust_remote_code=True).eval() # 采用gpu加载模型
+# model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v1", device_map="cpu", trust_remote_code=True).eval() # 采用cpu加载模型
+model.generation_config = GenerationConfig.from_pretrained("huskyhong/noname-ai-v1", trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
 
-def llmchat(tokenizer, model, query, historys):
-    response, history = model.chat(tokenizer, query, history=historys)
-    return response, history
-
-tokenizer, model = loadmodel("./models/your_model_name")  # 在这里将你的路径修改为模型路径
 while True:
     print("请输入技能效果：")
-    prompt = input()
-    prompt = "请帮我编写一个技能，技能效果如下：" + prompt
-    history = []
-    llmanswer, history = llmchat(tokenizer, model, prompt, history)
-    print(llmanswer)
+    prompt = "请帮我编写一个技能，技能效果如下：" + input()
+    response, history = model.chat(tokenizer, prompt, history = [])
+    print(response)
 ```
+4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v1"为相应位置
+      模型下载地址:
+   - [huggingface地址](https://huggingface.co/huskyhong/noname-ai-v1)
+   - [百度网盘地址](https://pan.baidu.com/s/1Ox471XuHF_gJbcPPnSZe7g?pwd=6666) 百度网盘提取码：6666 
+
 
 记得选择采用gpu加载模型还是cpu加载模型，然后把 `your_model_name` 替换为你实际的模型路径。
 
