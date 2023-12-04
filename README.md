@@ -44,6 +44,8 @@ while True:
 记得选择采用gpu加载模型还是cpu加载模型，然后把 `your_model_name` 替换为你实际的模型路径。
 
 ### delta checkpoint法
+0. 该方法视频教程
+   - [视频教程](https://www.bilibili.com/video/BV1j94y1E7qL)
 1. 安装 Python 以及相应的 Python 编译器
   - 注意：python适配版本为3.8,3.9,3.10,3.11，请勿安装过高或过低版本
 2. 在终端（命令行）中输入以下命令安装依赖环境:
@@ -74,6 +76,11 @@ while True:
 - Nvidia显卡，并且显存的全部+物理内存的一半达到16G，可以选择gpu版，gpu版能够获得更好的效果和更快的生成速度
 - AMD显卡，或者显存+物理内存的一半达不到16G要求的，可以选择cpu版，cpu版只需要内存（可包括虚拟内存）大于32G即可，cpu版所需配置低，并且占用空间小，缺陷是效果更差，生成更慢
 - [懒人一键包百度网盘下载地址](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
+- 请注意懒人一键包版本时间，确保版本为最新版！
+- gpu版最近更新时间为2023.12.01，cpu版最新更新时间为2023.12.04
+- 懒人包视频教程
+- [gpu版视频教程](https://www.bilibili.com/video/BV1eN41177KV)
+- [cpu版视频教程](https://www.bilibili.com/video/BV1ej41157ns)
 ## 网页版/服务器部署
    - 安装 Python 
    - 安装依赖环境
