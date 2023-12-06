@@ -14,7 +14,6 @@ def get_model():
     from transformers import AutoModelForCausalLM, AutoTokenizer
     from transformers.generation import GenerationConfig
     from peft import AutoPeftModelForCausalLM
-    modelpath = "/root/workspace/models/Qwen-7B-Chat"
     tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v1", trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v1", device_map="auto", trust_remote_code=True).eval() # 采用gpu加载模型
     # model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v1", device_map="cpu", trust_remote_code=True).eval() # 采用cpu加载模型
