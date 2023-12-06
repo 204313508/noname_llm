@@ -96,8 +96,7 @@ while True:
 - 请注意懒人一键包版本时间，确保版本为最新版！
 - gpu版最新版本为v1.1,cpu版最新版本为v1.1
 - 懒人包视频教程
-- [gpu版视频教程](https://www.bilibili.com/video/BV1eN41177KV)
-- [cpu版视频教程](https://www.bilibili.com/video/BV1ej41157ns)
+- [懒人包v1.1版视频教程](https://www.bilibili.com/video/BV1dj411575S/#reply451816959)
 ## 网页版/服务器部署
    - 安装 Python 
    - 安装依赖环境
