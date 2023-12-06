@@ -15,16 +15,10 @@ def get_model():
     from transformers.generation import GenerationConfig
     from peft import AutoPeftModelForCausalLM
     modelpath = "/root/workspace/models/Qwen-7B-Chat"
-    tokenizer = AutoTokenizer.from_pretrained(modelpath, trust_remote_code=True)
-    # model = AutoModelForCausalLM.from_pretrained(modelpath, device_map="auto", trust_remote_code=True,use_flash_attn=False).eval()
-    model = AutoPeftModelForCausalLM.from_pretrained(
-        "/root/workspace/noname/wumingsha/noname2/checkpoint-2000", # path to the output directory
-        device_map="auto",
-        bf16=True,
-        trust_remote_code=True,
-        use_flash_attn=False
-        ).eval()
-    model.generation_config = GenerationConfig.from_pretrained(modelpath, trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
+    tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v1", trust_remote_code=True)
+    model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v1", device_map="auto", trust_remote_code=True).eval() # 采用gpu加载模型
+    # model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v1", device_map="cpu", trust_remote_code=True).eval() # 采用cpu加载模型
+    model.generation_config = GenerationConfig.from_pretrained("huskyhong/noname-ai-v1", trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
 
     return tokenizer,model
 
