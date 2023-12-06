@@ -94,7 +94,7 @@ while True:
 - AMD显卡，或者显存+物理内存的一半达不到16G要求的，可以选择cpu版，cpu版只需要内存（可包括虚拟内存）大于32G即可，cpu版所需配置低，并且占用空间小，缺陷是效果更差，生成更慢
 - [懒人一键包百度网盘下载地址](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
 - 请注意懒人一键包版本时间，确保版本为最新版！
-- gpu版最近更新时间为2023.12.01，cpu版最新更新时间为2023.12.04
+- gpu版最新版本为v1.1,cpu版最新版本为v1.1
 - 懒人包视频教程
 - [gpu版视频教程](https://www.bilibili.com/video/BV1eN41177KV)
 - [cpu版视频教程](https://www.bilibili.com/video/BV1ej41157ns)
