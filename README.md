@@ -65,7 +65,7 @@ print(response[0]['generated_text'])
       第二代模型下载地址:
    - [huggingface地址（完整版）（暂未开放）](https://huggingface.co/huskyhong/noname-ai-v2)
    - [huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2-light)
-   - [百度网盘地址](https://pan.baidu.com/s/1Ox471XuHF_gJbcPPnSZe7g?pwd=6666) 百度网盘提取码：6666   
+   - [百度网盘地址](https://pan.baidu.com/s/1m9RfGqnuQbRYROE_UzuG-Q?pwd=6666) 百度网盘提取码：6666   
      第一代模型下载地址:
    - [huggingface地址](https://huggingface.co/huskyhong/noname-ai-v1)
    - [百度网盘地址](https://pan.baidu.com/s/1Ox471XuHF_gJbcPPnSZe7g?pwd=6666) 百度网盘提取码：6666 
@@ -77,7 +77,7 @@ print(response[0]['generated_text'])
 - [懒人一键包百度网盘下载地址](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
 - 请注意懒人一键包版本时间，确保版本为最新版！
 - 懒人包视频教程
-- [懒人包v2版视频教程（暂未发布）](https://www.bilibili.com/)
+- [懒人包v2版视频教程](https://www.bilibili.com/video/BV1mi4y1Y7JV/)
 - [懒人包v1.1版视频教程](https://www.bilibili.com/video/BV1dj411575S/#reply451816959)
 ## 网页版/服务器部署
    - 安装 Python 
