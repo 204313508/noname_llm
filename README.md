@@ -22,8 +22,7 @@
    ```bash
    pip install -r requirements.txt
    ```
-3. 采用以下python代码运行程序，模型将会自动下载
-   注意：第二代模型完整版暂未开放
+3. 采用以下python代码运行程序，模型将会自动下载，代码默认为第二代完整版
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
@@ -63,7 +62,7 @@ print(response[0]['generated_text'])
 
 4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v2"为相应位置  
       第二代模型下载地址:
-   - [huggingface地址（完整版）（暂未开放）](https://huggingface.co/huskyhong/noname-ai-v2)
+   - [huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2)
    - [huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2-light)
    - [百度网盘地址](https://pan.baidu.com/s/1m9RfGqnuQbRYROE_UzuG-Q?pwd=6666) 百度网盘提取码：6666   
      第一代模型下载地址:
