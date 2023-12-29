@@ -1,7 +1,7 @@
 # 无名杀AI
 
 无名杀ai/无名杀AI相关项目，该项目涉及AI程序，旨在通过输入技能效果，生成无名杀技能代码。  
-[modelscpoe在线体验](https://www.modelscope.cn/studios/huskyhong/nonameai)
+[modelscope（魔搭社区）在线体验](https://www.modelscope.cn/studios/huskyhong/nonameai)
 ## 配置要求
 
 为了更好地满足使用需求，请尽可能满足以下要求:
