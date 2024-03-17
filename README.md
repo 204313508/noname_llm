@@ -75,7 +75,7 @@ print(response[0]['generated_text'])
 - 一键安装，无需烦恼
 - 请根据自身配置选择合适的懒人一键包
 - [懒人一键包百度网盘下载地址（已更新v2.3）](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
-- [懒人一键包123网盘下载地址](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123网盘提取码:6666
+- [懒人一键包123网盘下载地址（已更新v2.3）](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123网盘提取码:6666
 - 请注意懒人一键包版本时间，确保版本为最新版！
 - 懒人包视频教程
 - [懒人包v2版视频教程](https://www.bilibili.com/video/BV1mi4y1Y7JV/)
