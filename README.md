@@ -2,6 +2,7 @@
 
 无名杀ai/无名杀AI相关项目，该项目涉及AI程序，旨在通过输入技能效果，生成无名杀技能代码。  
 [modelscope（魔搭社区）在线体验](https://www.modelscope.cn/studios/huskyhong/nonameai)  
+因为算力有限，在线体验版本仅为轻量cpu版，精度有限，如有需求请选择gpu版、完整版进行推理
 finetuned from QWen
 ## 配置要求
 
@@ -77,9 +78,8 @@ print(response[0]['generated_text'])
 - [懒人一键包百度网盘下载地址（已更新v2.3）](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
 - [懒人一键包123网盘下载地址（已更新v2.3）](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123网盘提取码:6666
 - 请注意懒人一键包版本时间，确保版本为最新版！
-- 懒人包视频教程
-- [懒人包v2版视频教程](https://www.bilibili.com/video/BV1mi4y1Y7JV/)
-- [懒人包v1.1版视频教程](https://www.bilibili.com/video/BV1dj411575S/#reply451816959)
+- 懒人包相关视频
+- [懒人包v2.3版效果对比](https://www.bilibili.com/video/BV1at421V7Qu)
 ## 网页版/服务器部署
    - 安装 Python 
    - 安装依赖环境
