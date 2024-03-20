@@ -57,7 +57,7 @@ prompt = "请帮我编写一个技能，技能效果如下：" + input("请输�
 response = generator(prompt, max_length=50, top_p=0.95)  # 可根据需要调整生成长度、top_p等超参数)
 print(response[0]['generated_text'])
 
-prompt = "请帮我编写一张卡牌，卡牌效果如下：：" + input("请输入卡牌效果：")
+prompt = "请帮我编写一张卡牌，卡牌效果如下：" + input("请输入卡牌效果：")
 response = generator(prompt, max_length=50, top_p=0.95)  # 可根据需要调整生成长度、top_p等超参数
 print(response[0]['generated_text'])
 ```
