@@ -38,37 +38,36 @@ To better meet usage requirements, please try to meet the following requirements
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
-到kenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v2", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v2", trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2", device_map="auto", trust_remote_code=True).eval() # Load the model using GPU
 # model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2", device_map="cpu", trust_remote_code=True).eval() # Load the model using CPU
 model.generation_config = GenerationConfig.from_pretrained("huskyhong/noname-ai-v2", trust_remote_code=True) # You can specify different generation lengths, top_p, and other related hyperparameters
 # For the first generation model, replace "huskyhong/noname-ai-v2" with "huskyhong/noname-ai-v1". For lightweight version v2.3 model, replace "huskyhong/noname-ai-v2" with "huskyhong/noname-ai-v2_3-light"
 
-prompt = "Please help me write a skill, the skill effect is as follows: " + input("Enter the skill effect: ")
+prompt = "请帮我编写一个技能，技能效果如下：" + input("请输入技能效果：")
 response, history = model.chat(tokenizer, prompt, history = [])
 print(response)
 
-prompt = "Please help me write a card, the card effect is as follows: " + input("Enter the card effect: ")
+prompt = "请帮我编写一张卡牌，卡牌效果如下：：" + input("请输入卡牌效果：")
 response, history = model.chat(tokenizer, prompt, history = [])
 print(response)
 ```
 Alternatively, you can use Hugging Face's pipeline for inference.
 ```python
-from transformers import pipeline
-
+from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 generator = pipeline(
     "text-generation",
     model="huskyhong/noname-ai-v2",
-    到kenizer="huskyhong/noname-ai-v2",
+    tokenizer="huskyhong/noname-ai-v2",
     device=0,  # Choose GPU device. If you want to use CPU, you can set device=-1
     trust_remote_code=True
 )
 
-prompt = "Please help me write a skill, the skill effect is as follows: " + input("Enter the skill effect: ")
+prompt = "请帮我编写一个技能，技能效果如下：" + input("请输入技能效果：")
 response = generator(prompt, max_length=50, top_p=0.95)  # You can adjust parameters such as generation length, top_p as needed
 print(response[0]['generated_text'])
 
-prompt = "Please help me write a card, the card effect is as follows: " + input("Enter the card effect: ")
+prompt = "请帮我编写一张卡牌，卡牌效果如下：" + input("请输入卡牌效果：")
 response = generator(prompt, max_length=50, top_p=0.95)  # You can adjust parameters such as generation length, top_p as needed
 print(response[0]['generated_text'])
 ```
