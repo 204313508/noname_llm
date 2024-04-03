@@ -1,3 +1,6 @@
+[切换到中文版本](README_zh.md) 
+
+[Switch to English Version](README.md)
 # 无名杀AI
 
 无名杀ai/无名杀AI相关项目，该项目涉及AI程序，旨在通过输入技能效果，生成无名杀技能代码。  
