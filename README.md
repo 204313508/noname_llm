@@ -124,10 +124,9 @@ Remember to choose whether to load the model using GPU or CPU, and replace `your
 If you have any related questions, please raise them in the official GitHub issue.
 
 ## Demo Images
-These demo images are based on version 1.0 release.
-![demo1](./demo1.jpg)
-![demo2](./demo2.jpg)
-![demo3](./demo3.jpg)
+These demo images are based on version 2.3 release.  
+![demo](./demo.png)
+
 
 ## Sponsorship
 - Shamelessly begging for sponsorship
