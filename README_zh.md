@@ -112,10 +112,8 @@ print(response[0]['generated_text'])
 如果有相关问题，请在GitHub官方的issue中提出。
 
 ## 演示图片
-该演示图片基于v1.0发布
-![demo1](./demo1.jpg)
-![demo2](./demo2.jpg)
-![demo3](./demo3.jpg)
+该演示图片基于v2.3发布  
+![demo1](./demo.png)
 
 ## 赞助
 - 厚颜无耻的求一个赞助
