@@ -98,7 +98,24 @@ print(response[0]['generated_text'])
    ```bash
    streamlit run webdemo.py
    ```
-   
+
+## 训练  
+训练需要安装新的依赖项
+```python
+pip install peft deepspeed
+```
+克隆该项目，并下载v2.3版本的模型文件，以轻量版为例：
+```bash
+git lfs install
+git clone https://github.com/204313508/noname_llm.git
+git clone https://huggingface.co/huskyhong/noname-ai-v2_3-light
+cd noname_llm/finetune
+```  
+修改finetune中训练所需参数，模型、数据集位置等信息，之后输入以下命令开始训练  
+```bash
+bash finetune.sh
+```
+
 ## 网页版/服务器示例
 ![webdemo1](./webdemo1.png)
 ![webdemo2](./webdemo2.png)
