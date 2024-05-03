@@ -6,7 +6,7 @@
 
 Projects related to Noname AI/Noname AI, involving AI programs aimed at generating Noname skill codes by inputting skill effects.
 
-[modelscope (Magic Community) Online Experience](https://www.modelscope.cn/studios/huskyhong/nonameai)
+[modelscope Online Experience](https://www.modelscope.cn/studios/huskyhong/nonameai)
 
 Due to limited computing power, the online experience version is only a lightweight CPU version with limited precision. If needed, please choose the GPU version or full version for inference.
 Fine-tuned from QWen.
@@ -109,6 +109,22 @@ Remember to choose whether to load the model using GPU or CPU, and replace `your
    ```bash
    streamlit run webdemo.py
    ```
+## Training  
+Training requires installing new dependencies:  
+```python
+pip install peft deepspeed
+```  
+Clone the project and download the v2.3 version of the model files, taking the lightweight version as an example:  
+```bash
+git lfs install
+git clone https://github.com/204313508/noname_llm.git
+git clone https://huggingface.co/huskyhong/noname-ai-v2_3-light
+cd noname_llm/finetune
+```  
+Modify the parameters required for training in the finetune script, such as model and dataset locations, then enter the following command to start training:  
+```bash
+bash finetune.sh
+```
    
 ## Web Version/Server Example
 ![webdemo1](./webdemo1.png)
