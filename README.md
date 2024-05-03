@@ -72,34 +72,32 @@ response = generator(prompt, max_length=50, top_p=0.95)  # You can adjust parame
 print(response[0]['generated_text'])
 ```
 
-4. If automatic downloading fails, you can manually download the model files and modify "huskyhong/noname-ai-v2" to the corresponding location in the code.
-   Download links for the second-generation model:
+4. If automatic downloading fails, you can manually download the model files and modify "huskyhong/noname-ai-v2" to the corresponding location in the code.  
+   Download links for the second-generation model:  
    - [v2.0 Hugging Face address (full version)](https://huggingface.co/huskyhong/noname-ai-v2)
    - [v2.3 Hugging Face address (lightweight version)](https://huggingface.co/huskyhong/noname-ai-v2_3-light)
-   - [Baidu Netdisk address](https://pan.baidu.com/s/1m9RfGqnuQbRYROE_UzuG-Q?pwd=6666) Baidu Netdisk extraction code: 6666
+   - [Baidu Netdisk address](https://pan.baidu.com/s/1m9RfGqnuQbRYROE_UzuG-Q?pwd=6666) Baidu Netdisk extraction code: 6666  
    Download links for the first-generation model:
    - [Hugging Face address](https://huggingface.co/huskyhong/noname-ai-v1)
-   - [Baidu Netdisk address](https://pan.baidu.com/s/1Ox471XuHF_gJbcPPnSZe7g?pwd=6666) Baidu Netdisk extraction code: 6666
+   - [Baidu Netdisk address](https://pan.baidu.com/s/1Ox471XuHF_gJbcPPnSZe7g?pwd=6666) Baidu Netdisk extraction code: 6666  
 Remember to choose whether to load the model using GPU or CPU, and replace `your_model_name` with your actual model path.
 
 ## Lazy One-Click Package
 
-- One-click installation, no worries.
-- Please choose the appropriate lazy one-click package according to your own configuration.
-- [Lazy One-Click Package Baidu Netdisk Download Address (Updated to v2.3)](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666
-- [Lazy One-Click Package 123 Netdisk Download Address (Updated to v2.3)](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123 Netdisk extraction code: 6666
-- Please pay attention to the version time of the lazy one-click package to ensure that the version is the latest!
-- Lazy package related videos
-- [Comparison of Effects of Lazy Package v2.3](https://www.bilibili.com/video/BV1at421V7Qu)
+- One-click installation, no worries.  
+- Please choose the appropriate lazy one-click package according to your own configuration.  
+- [Lazy One-Click Package Baidu Netdisk Download Address (Updated to v2.3)](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666  
+- [Lazy One-Click Package 123 Netdisk Download Address (Updated to v2.3)](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123 Netdisk extraction code: 6666  
+- Please pay attention to the version time of the lazy one-click package to ensure that the version is the latest!  
+- Lazy package related videos  
+- [Comparison of Effects of Lazy Package v2.3](https://www.bilibili.com/video/BV1at421V7Qu)  
 
 ## Web Version/Server Deployment
-   - Install Python
-   - Install dependencies
+   - Install Python  
+   - Install dependencies  
    ```bash
    pip install -r requirements.txt
-
-
-   ```
+   ```  
   - Install Streamlit
    ```bash
    pip install streamlit
