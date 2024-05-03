@@ -89,7 +89,7 @@ In the `finetune.py` script, you can adjust the following parameters according t
 - `--learning_rate`: Specify the learning rate.
 - `--weight_decay`: Specify the weight decay.
 
-## Training
+## Fine-tuning
 
 Run the following command to start the fine-tuning process:
 
