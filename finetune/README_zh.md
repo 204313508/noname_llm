@@ -1,3 +1,6 @@
+[切换到中文版本](README_zh.md) 
+
+[Switch to English Version](README.md)
 # Noname AI 模型微调
 
 ## 简介
