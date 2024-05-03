@@ -96,3 +96,17 @@ Run the following command to start the fine-tuning process:
 ```bash
 bash finetune.sh
 ```
+
+## Calling the Model
+
+After fine-tuning, you can use the following code to call the fine-tuned model:
+
+```python
+from peft import AutoPeftModelForCausalLM
+
+model = AutoPeftModelForCausalLM.from_pretrained(
+    path_to_adapter, # Path to the adapter you trained
+    device_map="auto",
+    trust_remote_code=True
+).eval()
+```
