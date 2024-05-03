@@ -100,3 +100,17 @@ DATA="/tmp/code/data.json"
 ```bash
 bash finetune.sh
 ```
+
+## 调用模型
+
+在微调完成后，您可以使用以下代码调用微调后的模型：
+
+```python
+from peft import AutoPeftModelForCausalLM
+
+model = AutoPeftModelForCausalLM.from_pretrained(
+    path_to_adapter, # 你训练得到的adapter路径
+    device_map="auto",
+    trust_remote_code=True
+).eval()
+```
