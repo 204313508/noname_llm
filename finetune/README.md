@@ -30,7 +30,7 @@ git lfs install
 git clone https://huggingface.co/huskyhong/noname-ai-v2_3-light
 ```
 
-3. Set environment variables and adjust the parameters in the training script (`finetune.py`) according to your requirements:
+3. Set environment variables and adjust the parameters in the training script (`finetune.sh`) according to your requirements:
 
 ```bash
 export CUDA_DEVICE_MAX_CONNECTIONS=1
