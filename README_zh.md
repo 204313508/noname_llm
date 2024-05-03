@@ -99,8 +99,8 @@ print(response[0]['generated_text'])
    streamlit run webdemo.py
    ```
 
-## 训练  
-训练需要安装新的依赖项
+## 训练/微调  
+训练/微调需要安装新的依赖项
 ```python
 pip install peft deepspeed
 ```
@@ -115,6 +115,7 @@ cd noname_llm/finetune
 ```bash
 bash finetune.sh
 ```
+详细步骤请参考[微调说明](./finetune/README.md)
 
 ## 网页版/服务器示例
 ![webdemo1](./webdemo1.png)
