@@ -111,7 +111,7 @@ git clone https://github.com/204313508/noname_llm.git
 git clone https://huggingface.co/huskyhong/noname-ai-v2_3-light
 cd noname_llm/finetune
 ```  
-修改finetune中训练所需参数，模型、数据集位置等信息，之后输入以下命令开始训练  
+修改finetune.sh中训练所需参数，模型、数据集位置等信息，之后输入以下命令开始训练  
 ```bash
 bash finetune.sh
 ```
