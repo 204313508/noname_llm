@@ -122,7 +122,8 @@ cd noname_llm/finetune
 Modify the parameters required for training in the finetune script, such as model and dataset locations, then enter the following command to start training:  
 ```bash
 bash finetune.sh
-```
+```  
+Please refer to the [Fine-tuning Guide](./finetune/README.md) for detailed steps.
    
 ## Web Version/Server Example
 ![webdemo1](./webdemo1.png)
