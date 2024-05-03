@@ -31,7 +31,7 @@ git lfs install
 git clone https://huggingface.co/huskyhong/noname-ai-v2_3-light
 ```
 
-3. 设置环境变量并根据您的需求调整训练脚本 (`finetune.py`) 中的参数：
+3. 设置环境变量并根据您的需求调整训练脚本 (`finetune.sh`) 中的参数：
 
 ```bash
 export CUDA_DEVICE_MAX_CONNECTIONS=1
