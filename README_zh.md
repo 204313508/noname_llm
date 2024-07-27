@@ -50,8 +50,8 @@ print(response)
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 generator = pipeline(
     "text-generation",
-    model="huskyhong/noname-ai-v2",
-    tokenizer="huskyhong/noname-ai-v2",
+    model="huskyhong/noname-ai-v2_5",
+    tokenizer="huskyhong/noname-ai-v2_5",
     device=0,  # 选择GPU设备，如果要使用CPU，可以设置device=-1
     trust_remote_code=True
 )
@@ -67,8 +67,8 @@ print(response[0]['generated_text'])
 
 4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v2"为相应位置  
       第二代模型下载地址:
-   - [v2.0版本huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2)
-   - [v2.3版本huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2_3-light)
+   - [v2.0版本huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2_5)
+   - [v2.3版本huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2_5-light)
    - [百度网盘地址](https://pan.baidu.com/s/1m9RfGqnuQbRYROE_UzuG-Q?pwd=6666) 百度网盘提取码：6666   
      第一代模型下载地址:
    - [huggingface地址](https://huggingface.co/huskyhong/noname-ai-v1)
