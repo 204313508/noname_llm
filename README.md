@@ -38,11 +38,11 @@ To better meet usage requirements, please try to meet the following requirements
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
-tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v2", trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2", device_map="auto", trust_remote_code=True).eval() # Load the model using GPU
-# model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2", device_map="cpu", trust_remote_code=True).eval() # Load the model using CPU
-model.generation_config = GenerationConfig.from_pretrained("huskyhong/noname-ai-v2", trust_remote_code=True) # You can specify different generation lengths, top_p, and other related hyperparameters
-# For the first generation model, replace "huskyhong/noname-ai-v2" with "huskyhong/noname-ai-v1". For lightweight version v2.3 model, replace "huskyhong/noname-ai-v2" with "huskyhong/noname-ai-v2_3-light"
+tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v2_5", trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2_5", device_map="auto", trust_remote_code=True).eval() # Load the model using GPU
+# model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2_5", device_map="cpu", trust_remote_code=True).eval() # Load the model using CPU
+5model.generation_config = GenerationConfig.from_pretrained("huskyhong/noname-ai-v2_5", trust_remote_code=True) # You can specify different generation lengths, top_p, 和 other related hyperparameters
+# For the first generation model, replace "huskyhong/noname-ai-v2_5" with "huskyhong/noname-ai-v1". For lightweight version v2.5 model, replace "huskyhong/noname-ai-v2_5" with "huskyhong/noname-ai-v2_5-light"
 
 prompt = "请帮我编写一个技能，技能效果如下：" + input("请输入技能效果：")
 response, history = model.chat(tokenizer, prompt, history = [])
@@ -86,7 +86,7 @@ Remember to choose whether to load the model using GPU or CPU, and replace `your
 
 - One-click installation, no worries.  
 - Please choose the appropriate lazy one-click package according to your own configuration.  
-- [Lazy One-Click Package Baidu Netdisk Download Address (Updated to v2.3)](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666  
+- [Lazy One-Click Package Baidu Netdisk Download Address (Updated to v2.5)](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666  
 - [Lazy One-Click Package 123 Netdisk Download Address (Updated to v2.3)](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123 Netdisk extraction code: 6666  
 - Please pay attention to the version time of the lazy one-click package to ensure that the version is the latest!  
 - Lazy package related videos  
