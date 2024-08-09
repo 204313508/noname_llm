@@ -35,7 +35,7 @@ tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v2_5", trust_remo
 model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2_5", device_map="auto", trust_remote_code=True).eval() # 采用gpu加载模型
 # model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2_5", device_map="cpu", trust_remote_code=True).eval() # 采用cpu加载模型
 model.generation_config = GenerationConfig.from_pretrained("huskyhong/noname-ai-v2_5", trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
-# 第一代模型请将huskyhong/noname-ai-v2_5改为huskyhong/noname-ai-v1，轻量版v2.3模型请将huskyhong/noname-ai-v2_5改为huskyhong/noname-ai-v2_5-light
+# 第一代模型请将huskyhong/noname-ai-v2_5改为huskyhong/noname-ai-v1，轻量版v2.5模型请将huskyhong/noname-ai-v2_5改为huskyhong/noname-ai-v2_5-light
 
 prompt = "请帮我编写一个技能，技能效果如下：" + input("请输入技能效果：")
 response, history = model.chat(tokenizer, prompt, history = [])
@@ -67,8 +67,8 @@ print(response[0]['generated_text'])
 
 4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v2"为相应位置  
       第二代模型下载地址:
-   - [v2.0版本huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2_5)
-   - [v2.3版本huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2_5-light)
+   - [v2.5版本huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2_5)
+   - [v2.5版本huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2_5-light)
    - [百度网盘地址](https://pan.baidu.com/s/1m9RfGqnuQbRYROE_UzuG-Q?pwd=6666) 百度网盘提取码：6666   
      第一代模型下载地址:
    - [huggingface地址](https://huggingface.co/huskyhong/noname-ai-v1)
@@ -79,10 +79,10 @@ print(response[0]['generated_text'])
 - 一键安装，无需烦恼
 - 请根据自身配置选择合适的懒人一键包
 - [懒人一键包百度网盘下载地址（已更新v2.5）](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
-- [懒人一键包123网盘下载地址（已更新v2.3）](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123网盘提取码:6666
+- [懒人一键包123网盘下载地址（已更新v2.5）](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123网盘提取码:6666
 - 请注意懒人一键包版本时间，确保版本为最新版！
 - 懒人包相关视频
-- [懒人包v2.3版效果对比](https://www.bilibili.com/video/BV1at421V7Qu)
+- [懒人包v2.5版效果对比]([https://www.bilibili.com/video/BV1KKY4e8EaC]
 ## 网页版/服务器部署
    - 安装 Python 
    - 安装依赖环境
