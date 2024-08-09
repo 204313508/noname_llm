@@ -112,11 +112,11 @@ Training requires installing new dependencies:
 ```python
 pip install peft deepspeed
 ```  
-Clone the project和download the v2.5 version of the model files, taking the lightweight version as an example:  
+Clone the project和download the v2.3 version of the model files, taking the lightweight version as an example:  
 ```bash
 git lfs install
 git clone https://github.com/204313508/noname_llm.git
-git clone https://huggingface.co/huskyhong/noname-ai-v2_5-light
+git clone https://huggingface.co/huskyhong/noname-ai-v2_3-light
 cd noname_llm/finetune
 ```  
 Modify the parameters required for training in the finetune script, such as model and dataset locations, then enter the following command to start training:  
