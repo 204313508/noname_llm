@@ -57,8 +57,8 @@ Alternatively, you can use Hugging Face's pipeline for inference.
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 generator = pipeline(
     "text-generation",
-    model="huskyhong/noname-ai-v2",
-    tokenizer="huskyhong/noname-ai-v2",
+    model="huskyhong/noname-ai-v2_5",
+    tokenizer="huskyhong/noname-ai-v2_5",
     device=0,  # Choose GPU device. If you want to use CPU, you can set device=-1
     trust_remote_code=True
 )
@@ -74,8 +74,8 @@ print(response[0]['generated_text'])
 
 4. If automatic downloading fails, you can manually download the model files and modify "huskyhong/noname-ai-v2" to the corresponding location in the code.  
    Download links for the second-generation model:  
-   - [v2.0 Hugging Face address (full version)](https://huggingface.co/huskyhong/noname-ai-v2)
-   - [v2.3 Hugging Face address (lightweight version)](https://huggingface.co/huskyhong/noname-ai-v2_3-light)
+   - [v2.5 Hugging Face address (full version)](https://huggingface.co/huskyhong/noname-ai-v2_5)
+   - [v2.5 Hugging Face address (lightweight version)](https://huggingface.co/huskyhong/noname-ai-v2_5-light)
    - [Baidu Netdisk address](https://pan.baidu.com/s/1m9RfGqnuQbRYROE_UzuG-Q?pwd=6666) Baidu Netdisk extraction code: 6666  
    Download links for the first-generation model:
    - [Hugging Face address](https://huggingface.co/huskyhong/noname-ai-v1)
@@ -87,10 +87,10 @@ Remember to choose whether to load the model using GPU or CPU, and replace `your
 - One-click installation, no worries.  
 - Please choose the appropriate lazy one-click package according to your own configuration.  
 - [Lazy One-Click Package Baidu Netdisk Download Address (Updated to v2.5)](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666  
-- [Lazy One-Click Package 123 Netdisk Download Address (Updated to v2.3)](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123 Netdisk extraction code: 6666  
+- [Lazy One-Click Package 123 Netdisk Download Address (Updated to v2.5)](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123 Netdisk extraction code: 6666  
 - Please pay attention to the version time of the lazy one-click package to ensure that the version is the latest!  
 - Lazy package related videos  
-- [Comparison of Effects of Lazy Package v2.3](https://www.bilibili.com/video/BV1at421V7Qu)  
+- [Comparison of Effects of Lazy Package v2.5](https://www.bilibili.com/video/BV1KKY4e8EaC/)  
 
 ## Web Version/Server Deployment
    - Install Python  
@@ -112,11 +112,11 @@ Training requires installing new dependencies:
 ```python
 pip install peft deepspeed
 ```  
-Clone the project and download the v2.3 version of the model files, taking the lightweight version as an example:  
+Clone the project和download the v2.5 version of the model files, taking the lightweight version as an example:  
 ```bash
 git lfs install
 git clone https://github.com/204313508/noname_llm.git
-git clone https://huggingface.co/huskyhong/noname-ai-v2_3-light
+git clone https://huggingface.co/huskyhong/noname-ai-v2_5-light
 cd noname_llm/finetune
 ```  
 Modify the parameters required for training in the finetune script, such as model and dataset locations, then enter the following command to start training:  
