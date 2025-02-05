@@ -27,7 +27,46 @@ finetuned from QWen
    ```bash
    pip install -r requirements.txt
    ```
-3. 采用以下python代码运行程序，模型将会自动下载，代码默认为v2.0完整版
+3. 采用以下python代码运行程序，模型将会自动下载，v3.x模型代码运行方式如下：
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_name = "huskyhong/noname-ai-v3.0"
+
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    torch_dtype="auto",
+    device_map="auto"
+)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+prompt = "请帮我用JavaScript编写一个无名杀游戏的技能，技能效果如下：你使用杀造成的伤害+1"
+# prompt = "请帮我用JavaScript编写一张无名杀游戏的卡牌，卡牌效果如下：xxx"
+messages = [
+    {"role": "system", "content": "你是由B站up主AKA臭脸臭羊驼训练得到的无名杀AI，旨在帮助用户编写无名杀技能或卡牌代码."},
+    {"role": "user", "content": prompt}
+]
+text = tokenizer.apply_chat_template(
+    messages,
+    tokenize=False,
+    add_generation_prompt=True
+)
+model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+generated_ids = model.generate(
+    **model_inputs,
+    max_new_tokens=512
+)
+generated_ids = [
+    output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+]
+
+response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+print(response)
+```
+
+v2.x,v1.x代码运行方式如下  
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
@@ -65,7 +104,9 @@ response = generator(prompt, max_length=50, top_p=0.95)  # 可根据需要调整
 print(response[0]['generated_text'])
 ```
 
-4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v2"为相应位置  
+4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v2"为相应位置
+   第三代模型下载地址:
+   - [百度网盘地址](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
       第二代模型下载地址:
    - [v2.5版本huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2_5)
    - [v2.5版本huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2_5-light)
@@ -78,7 +119,7 @@ print(response[0]['generated_text'])
 ## 懒人一键包
 - 一键安装，无需烦恼
 - 请根据自身配置选择合适的懒人一键包
-- [懒人一键包百度网盘下载地址（已更新v2.5）](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
+- [懒人一键包百度网盘下载地址（已更新v3.0）](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
 - [懒人一键包123网盘下载地址（已更新v2.5）](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123网盘提取码:6666
 - 请注意懒人一键包版本时间，确保版本为最新版！
 - 懒人包相关视频
@@ -130,7 +171,7 @@ bash finetune.sh
 如果有相关问题，请在GitHub官方的issue中提出。
 
 ## 演示图片
-该演示图片基于v2.3发布  
+该演示图片基于v3.x启动器发布  
 ![demo1](./demo.png)
 
 ## 赞助
