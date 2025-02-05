@@ -112,6 +112,12 @@ print(response[0]['generated_text'])
 ```
 
 4. If automatic downloading fails, you can manually download the model files and modify "huskyhong/noname-ai-v2" to the corresponding location in the code.  
+   Download links for the third-generation model:  
+   - [v3.0 Hugging Face address (full version)](https://huggingface.co/huskyhong/noname-ai-v3.0)
+   - [v3.0 Hugging Face address (mediumweight version)](https://huggingface.co/huskyhong/noname-ai-v3.0-medium)
+   - [v3.0 Hugging Face address (lightweight version)](https://huggingface.co/huskyhong/noname-ai-v3.0-light)
+   - [v3.0 Hugging Face address (miniweight version)](https://huggingface.co/huskyhong/noname-ai-v3.0-mini)
+   - [Baidu Netdisk address](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666 
    Download links for the second-generation model:  
    - [v2.5 Hugging Face address (full version)](https://huggingface.co/huskyhong/noname-ai-v2_5)
    - [v2.5 Hugging Face address (lightweight version)](https://huggingface.co/huskyhong/noname-ai-v2_5-light)
@@ -125,7 +131,7 @@ Remember to choose whether to load the model using GPU or CPU, and replace `your
 
 - One-click installation, no worries.  
 - Please choose the appropriate lazy one-click package according to your own configuration.  
-- [Lazy One-Click Package Baidu Netdisk Download Address (Updated to v2.5)](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666  
+- [Lazy One-Click Package Baidu Netdisk Download Address (Updated to v3.0)](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) Baidu Netdisk extraction code: 6666  
 - [Lazy One-Click Package 123 Netdisk Download Address (Updated to v2.5)](https://www.123pan.com/s/lOcnjv-pnOG3.html) 123 Netdisk extraction code: 6666  
 - Please pay attention to the version time of the lazy one-click package to ensure that the version is the latest!  
 - Lazy package related videos  
