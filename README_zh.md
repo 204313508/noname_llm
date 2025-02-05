@@ -106,6 +106,10 @@ print(response[0]['generated_text'])
 
 4. 如果自动下载出错，可以手动下载模型文件，同时修改代码中的"huskyhong/noname-ai-v2"为相应位置
    第三代模型下载地址:
+   - [v3.0版本huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2_5)
+   - [v3.0版本huggingface地址（普通版）](https://huggingface.co/huskyhong/noname-ai-v2_5-medium)
+   - [v3.0版本huggingface地址（轻量版）](https://huggingface.co/huskyhong/noname-ai-v2_5-light)
+   - [v3.0版本huggingface地址（迷你版）](https://huggingface.co/huskyhong/noname-ai-v2_5-mini)
    - [百度网盘地址](https://pan.baidu.com/s/1zIcRZtQv5oIdu7_abie9Vw?pwd=6666) 百度网盘提取码：6666
       第二代模型下载地址:
    - [v2.5版本huggingface地址（完整版）](https://huggingface.co/huskyhong/noname-ai-v2_5)
