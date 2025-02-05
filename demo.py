@@ -1,15 +1,34 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.generation import GenerationConfig
-tokenizer = AutoTokenizer.from_pretrained("huskyhong/noname-ai-v2", trust_remote_code=True)
-# model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2", device_map="auto", trust_remote_code=True).eval() # 采用gpu加载模型
-model = AutoModelForCausalLM.from_pretrained("huskyhong/noname-ai-v2", device_map="cpu", trust_remote_code=True).eval() # 采用cpu加载模型
-model.generation_config = GenerationConfig.from_pretrained("huskyhong/noname-ai-v2", trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
-# 第一代模型请将huskyhong/noname-ai-v2改为huskyhong/noname-ai-v1，轻量版模型请将huskyhong/noname-ai-v2改为huskyhong/noname-ai-v2_3-light
 
-prompt = "请帮我编写一个技能，技能效果如下：" + input("请输入技能效果：")
-response, history = model.chat(tokenizer, prompt, history = [])
-print(response)
+model_name = "huskyhong/noname-ai-v3.0"
 
-prompt = "请帮我编写一张卡牌，卡牌效果如下：" + input("请输入卡牌效果：")
-response, history = model.chat(tokenizer, prompt, history = [])
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    torch_dtype="auto",
+    device_map="auto"
+)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+prompt = "请帮我用JavaScript编写一个无名杀游戏的技能，技能效果如下：你使用杀造成的伤害+1"
+# prompt = "请帮我用JavaScript编写一张无名杀游戏的卡牌，卡牌效果如下：xxx"
+messages = [
+    {"role": "system", "content": "你是由B站up主AKA臭脸臭羊驼训练得到的无名杀AI，旨在帮助用户编写无名杀技能或卡牌代码."},
+    {"role": "user", "content": prompt}
+]
+text = tokenizer.apply_chat_template(
+    messages,
+    tokenize=False,
+    add_generation_prompt=True
+)
+model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+generated_ids = model.generate(
+    **model_inputs,
+    max_new_tokens=512
+)
+generated_ids = [
+    output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+]
+
+response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 print(response)
